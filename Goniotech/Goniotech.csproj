@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{51F9721F-F179-424A-8C21-CEAA173B71C7}</ProjectGuid>
+    <ProjectGuid>{D88DB6E0-04B1-4C3E-BA31-FF71F641BD4E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Principal</RootNamespace>
-    <AssemblyName>Principal</AssemblyName>
+    <RootNamespace>Goniotech</RootNamespace>
+    <AssemblyName>Goniotech</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,8 +37,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -64,23 +63,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="bd_GoniotechDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>bd_GoniotechDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="CadastrarPaciente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadastrarPaciente.Designer.cs">
-      <DependentUpon>CadastrarPaciente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LocalizarPaciente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LocalizarPaciente.Designer.cs">
-      <DependentUpon>LocalizarPaciente.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -100,27 +82,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="CadastrarPaciente.resx">
-      <DependentUpon>CadastrarPaciente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LocalizarPaciente.resx">
-      <DependentUpon>LocalizarPaciente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="bd_GoniotechDataSet.xsc">
-      <DependentUpon>bd_GoniotechDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bd_GoniotechDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bd_GoniotechDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bd_GoniotechDataSet.xss">
-      <DependentUpon>bd_GoniotechDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
