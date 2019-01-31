@@ -1,0 +1,21 @@
+﻿<Window x:Class="Goniotech.Busca"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Goniotech"
+        mc:Ignorable="d"
+        Title="Busca" Height="300" Width="600"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        >
+    <Grid>
+        <Label x:Name="lbl_consulta" Content="CONSULTA" Margin="140,17,140,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+        <Label x:Name="lbl_nomeFisioterapeuta" Content="Nome" HorizontalAlignment="Left" Margin="20,55,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbx_nomeFisioterapeuta" Height="23" Margin="73,55,92,0" TextWrapping="Wrap" VerticalAlignment="Top" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
+        <RadioButton x:Name="rbtn_buscaFisioterapeuta" Content="Fisioterapeuta" HorizontalAlignment="Left" Margin="185,96,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbtn_buscaPaciente" Content="Paciente" HorizontalAlignment="Left" Margin="329,97,0,0" VerticalAlignment="Top"/>
+        <DataGrid Margin="20,129,20,20"/>
+        <Button x:Name="btn_busca" Content="Buscar" Margin="510,55,20,0" Height="23" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

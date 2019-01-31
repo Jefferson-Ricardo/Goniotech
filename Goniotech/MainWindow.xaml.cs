@@ -23,6 +23,29 @@ namespace Goniotech
         public MainWindow()
         {
             InitializeComponent();
+            
         }
+
+        
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Paciente cadastrarPaciente = new Paciente();
+            cadastrarPaciente.ShowDialog();
+        }
+
+        private void Btn_cadastrarFisioterapeuta_Click(object sender, RoutedEventArgs e)
+        {
+            Fisioterapeuta cadastrarFisioterapeuta = new Fisioterapeuta();
+            cadastrarFisioterapeuta.ShowDialog();
+        }
+
+        private void Btn_consulta_Click(object sender, RoutedEventArgs e)
+        {
+            Busca busca = new Busca();
+            busca.ShowDialog();
+        }
+        
+        
     }
 }

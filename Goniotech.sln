@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goniotech", "Goniotech\Goniotech.csproj", "{D88DB6E0-04B1-4C3E-BA31-FF71F641BD4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuxiliarKinect", "..\GonioTech_WPF_APP\AuxiliarKinect\AuxiliarKinect.csproj", "{8C05FCDA-DFC3-4A9F-8062-BC286708D5FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinect", "..\GonioTech_WPF_APP\Kinect\Kinect.csproj", "{7428ED13-1003-4DC4-B215-0D4DC8C88878}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D88DB6E0-04B1-4C3E-BA31-FF71F641BD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D88DB6E0-04B1-4C3E-BA31-FF71F641BD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D88DB6E0-04B1-4C3E-BA31-FF71F641BD4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C05FCDA-DFC3-4A9F-8062-BC286708D5FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C05FCDA-DFC3-4A9F-8062-BC286708D5FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C05FCDA-DFC3-4A9F-8062-BC286708D5FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C05FCDA-DFC3-4A9F-8062-BC286708D5FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7428ED13-1003-4DC4-B215-0D4DC8C88878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7428ED13-1003-4DC4-B215-0D4DC8C88878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7428ED13-1003-4DC4-B215-0D4DC8C88878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7428ED13-1003-4DC4-B215-0D4DC8C88878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

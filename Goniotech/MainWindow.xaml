@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Goniotech"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Goniotech" Height="768" Width="1366"
+        WindowState="Maximized"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="NoResize"
+        >
     <Grid>
-        
+
+        <Image Source="C:\Users\Jefferson\source\repos\GonioTech\GonioTech\Images\Logo.png" Margin="0,70,0,0" Opacity="0.3"/>
+        <Button x:Name="btn_cadastrarPaciente" Content="Paciente" Margin="10,80,0,0" Click="Button_Click" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" BorderBrush="{x:Null}" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" Cursor="Hand" FontSize="14" ToolTip="Cadastrar Paciente">
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\paciente.ico" Stretch="Uniform" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_cadastrarFisioterapeuta" Content="Fisioterapeuta" Margin="10,160,0,0" Click="Btn_cadastrarFisioterapeuta_Click" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" BorderBrush="{x:Null}" HorizontalContentAlignment="Right" Cursor="Hand" ToolTip="Cadastrar Fisioterapeuta">
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\fisioterapeuta.ico" Stretch="Uniform" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_consulta" Content="Consulta" Margin="10,240,0,0" Click="Btn_consulta_Click" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" HorizontalContentAlignment="Right" BorderBrush="{x:Null}" Cursor="Hand" ToolTip="Consulta">
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\consulta.ico" Stretch="Uniform" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
+        <Label Content="SISTEMA DE AVALIAÇÃO GONIOMÉTRICA" Margin="150,26,150,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="{x:Null}" Foreground="#FFAA0000"/>
+        <Separator Height="36" Margin="0,51,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
