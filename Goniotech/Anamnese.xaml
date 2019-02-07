@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Goniotech"
         mc:Ignorable="d"
-        Title="Anamnese" Height="450" Width="800"
+        Title="Anamnese" Height="590" Width="800"
         WindowStyle="SingleBorderWindow"
         
         WindowStartupLocation="CenterScreen"
@@ -13,24 +13,46 @@
         >
     <Grid>
         <Label x:Name="lbl_anamneseNomePaciente" Content="Nome" HorizontalAlignment="Left" Margin="12,13,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="lbl_avaliarNomePaciente1" Content="" HorizontalAlignment="Left" Margin="58,14,0,0" VerticalAlignment="Top" Width="499"/>
         <Label x:Name="lbl_diagnosticoCineticoFuncional" Content="Diagnóstico Cinético-Funcional" HorizontalAlignment="Left" Margin="12,39,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="tbx_diagnosticoCineticoFuncional" Margin="15,61,0,0" TextWrapping="Wrap" TextAlignment="Justify" HorizontalAlignment="Left" Width="375" Height="52" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="tbx_diagnosticoCineticoFuncional" Margin="15,61,0,0" TextWrapping="Wrap" TextAlignment="Justify" Height="52" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" SpellCheck.IsEnabled="True" Language="Pt-br" HorizontalAlignment="Left" Width="375"/>
         <Label x:Name="lbl_queixaprincipal" Content="Queixa Principal" HorizontalAlignment="Left" Margin="401,39,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="tbx_queixaprincipal" Height="52" Margin="404,61,15,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Justify" VerticalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="tbx_queixaprincipal" Height="52" Margin="404,61,15,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Justify" VerticalScrollBarVisibility="Auto" SpellCheck.IsEnabled="True" Language="Pt-br"/>
         <Label x:Name="lbl_historiaDoencaAtual" Content="História da Doença Atual" HorizontalAlignment="Left" Margin="12,117,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="tbx_historiaDoencaAtual" Margin="15,139,0,0" TextWrapping="Wrap" TextAlignment="Justify" HorizontalAlignment="Left" Width="375" Height="52" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="tbx_historiaDoencaAtual" Margin="15,139,0,0" TextWrapping="Wrap" TextAlignment="Justify" Height="52" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" SpellCheck.IsEnabled="True" Language="Pt-br" HorizontalAlignment="Left" Width="375"/>
         <Label x:Name="lbl_historiaFamiliar" Content="História Familiar e Pregressa" HorizontalAlignment="Left" Margin="401,117,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="tbx_historiaFamiliar" Height="52" Margin="404,139,15,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Justify" VerticalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="tbx_historiaFamiliar" Height="52" Margin="404,139,15,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Justify" VerticalScrollBarVisibility="Auto" SpellCheck.IsEnabled="True" Language="Pt-br"/>
         <Label x:Name="lbl_antecedentesCirurgicos" Content="Antecedentes Cirúrgicos" HorizontalAlignment="Left" Margin="12,198,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="tbx_antecedentesCirurgicos" Margin="15,220,0,0" TextWrapping="Wrap" TextAlignment="Justify" HorizontalAlignment="Left" Width="375" Height="52" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="tbx_antecedentesCirurgicos" Margin="15,220,0,0" TextWrapping="Wrap" TextAlignment="Justify" Height="52" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" SpellCheck.IsEnabled="True" Language="Pt-br" HorizontalAlignment="Left" Width="375"/>
         <Label x:Name="lbl_medicamentos" Content="Medicamentos" HorizontalAlignment="Left" Margin="401,198,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="tbx_medicamentos" Height="52" Margin="404,220,15,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Justify" VerticalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="tbx_medicamentos" Height="52" Margin="404,220,15,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Justify" VerticalScrollBarVisibility="Auto" SpellCheck.IsEnabled="True" Language="Pt-br"/>
         <Label x:Name="lbl_examesComplementares" Content="Exames Complementares" HorizontalAlignment="Left" Margin="12,278,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="tbx_examesComplementares" Margin="15,300,0,0" TextWrapping="Wrap" TextAlignment="Justify" HorizontalAlignment="Left" Width="375" Height="52" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="tbx_examesComplementares" Margin="15,300,0,0" TextWrapping="Wrap" TextAlignment="Justify" Height="52" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" SpellCheck.IsEnabled="True" Language="Pt-br" HorizontalAlignment="Left" Width="375"/>
         <Label x:Name="lbl_objetivosFisioterapia" Content="Objetivos e Conduta Fisioterapeutica" HorizontalAlignment="Left" Margin="401,278,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="tbx_objetivosFisioterapia" Height="52" Margin="404,300,15,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Justify" VerticalScrollBarVisibility="Auto"/>
-        <Button x:Name="btn_salvarAnamnese" Content="Salvar" Margin="0,0,15,15" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
+        <TextBox x:Name="tbx_objetivosFisioterapia" Height="52" Margin="404,300,15,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Justify" VerticalScrollBarVisibility="Auto" SpellCheck.IsEnabled="True" Language="Pt-br"/>
+        <Button x:Name="btn_salvarAnamnese" Content="Salvar" Margin="0,0,15,25" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" Click="Btn_salvarAnamnese_Click"/>
+        <Label x:Name="lbl_medicoResponsavel" Content="Médico Responsável" HorizontalAlignment="Left" Margin="13,472,0,0" VerticalAlignment="Top" Width="117"/>
+        <TextBox x:Name="tbx_medicoResponsavel" HorizontalAlignment="Left" Height="24" Margin="136,472,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_crm" Content="CRM" HorizontalAlignment="Left" Margin="395,472,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbx_crm" Height="24" Margin="435,472,265,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_dianosticoMedico" Content="DIAGNÓSTICO MÉDICO" HorizontalAlignment="Left" Margin="12,367,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lbl_1" Content="1" HorizontalAlignment="Left" Margin="12,397,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.479,0.5"/>
+        <TextBox x:Name="tbx_diagnostico1" HorizontalAlignment="Left" Height="24" Margin="36,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_cid1" Content="CID" HorizontalAlignment="Left" Margin="294,397,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbx_cid1" HorizontalAlignment="Left" Height="24" Margin="329,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_2" Content="2" HorizontalAlignment="Left" Margin="402,397,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.479,0.5"/>
+        <TextBox x:Name="tbx_diagnostico2" HorizontalAlignment="Left" Height="24" Margin="426,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_cid2" Content="CID" HorizontalAlignment="Left" Margin="683,397,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbx_cid2" Height="24" Margin="716,397,27,0" TextWrapping="Wrap" VerticalAlignment="Top" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_3" Content="3" HorizontalAlignment="Left" Margin="12,431,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.479,0.5"/>
+        <TextBox x:Name="tbx_diagnostico3" HorizontalAlignment="Left" Height="24" Margin="36,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_cid3" Content="CID" HorizontalAlignment="Left" Margin="294,431,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbx_cid4" HorizontalAlignment="Left" Height="24" Margin="329,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_4" Content="4" HorizontalAlignment="Left" Margin="402,431,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.479,0.5"/>
+        <TextBox x:Name="tbx_diagnostico4" HorizontalAlignment="Left" Height="24" Margin="426,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_cid4" Content="CID" HorizontalAlignment="Left" Margin="683,431,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbx_cid3" Height="24" Margin="716,431,27,0" TextWrapping="Wrap" VerticalAlignment="Top" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
+        <Button x:Name="btn_cancelar" Content="Cancelar" Margin="0,0,110,25" Click="Btn_cancelar_Click" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75"/>
+        <TextBox x:Name="tbx_AnamneseNomePaciente" HorizontalAlignment="Left" Height="23" Margin="66,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323"/>
 
     </Grid>
 </Window>

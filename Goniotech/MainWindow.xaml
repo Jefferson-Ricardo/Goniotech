@@ -15,7 +15,7 @@
         <Image Source="C:\Users\Jefferson\source\repos\GonioTech\GonioTech\Images\Logo.png" Margin="0,70,0,0" Opacity="0.3"/>
         <Button x:Name="btn_cadastrarPaciente" Content="Paciente" Margin="10,80,0,0" Click="Button_Click" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" BorderBrush="{x:Null}" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" Cursor="Hand" FontSize="14" ToolTip="Cadastrar Paciente">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\paciente.ico" Stretch="Uniform" AlignmentX="Left"/>
+                <ImageBrush ImageSource="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\paciente.ico" AlignmentX="Left" Stretch="Uniform"/>
             </Button.Background>
         </Button>
         <Button x:Name="btn_cadastrarFisioterapeuta" Content="Fisioterapeuta" Margin="10,160,0,0" Click="Btn_cadastrarFisioterapeuta_Click" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" BorderBrush="{x:Null}" HorizontalContentAlignment="Right" Cursor="Hand" ToolTip="Cadastrar Fisioterapeuta">

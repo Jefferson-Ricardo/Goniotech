@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Goniotech"
         mc:Ignorable="d"
-        Title="Paciente" Height="477.5" Width="800"
+        Title="Paciente" Height="375.119" Width="800"
         WindowStyle="SingleBorderWindow"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         >
-    <Grid Height="446" VerticalAlignment="Top">
+    <Grid Margin="0,0,0,-100">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="535*"/>
             <ColumnDefinition Width="258*"/>
@@ -45,7 +45,7 @@
         <Label x:Name="lbl_profissaoPaciente" Content="Profissão" HorizontalAlignment="Left" Margin="20,210,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbx_profissaoPaciente" HorizontalAlignment="Left" Height="22" Margin="79,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
         <Label x:Name="lbl_ocupacaoAtual" Content="Ocupação Atual" HorizontalAlignment="Left" Margin="273,209,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbx_ocupacaoAtual" Margin="368,210,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center">
+        <ComboBox x:Name="cbx_ocupacaoAtual" Margin="368,210,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" SelectionChanged="Cbx_ocupacaoAtual_SelectionChanged">
             <ComboBoxItem>Assalariado</ComboBoxItem>
             <ComboBoxItem>Autônomo</ComboBoxItem>
             <ComboBoxItem>Não assalariado</ComboBoxItem>
@@ -58,39 +58,18 @@
         </ComboBox>
         <Label x:Name="lbl_outro" Content="Outro" HorizontalAlignment="Left" Margin="7.5,209,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBox x:Name="tbx_outro" Height="23" Margin="54.5,210,20,0" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Grid.Column="1" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_medicoResponsavel" Content="Médico Responsável" HorizontalAlignment="Left" Margin="20,248,0,0" VerticalAlignment="Top" Width="117"/>
-        <TextBox x:Name="tbx_medicoResponsavel" HorizontalAlignment="Left" Height="24" Margin="143,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_crm" Content="CRM" HorizontalAlignment="Left" Margin="402,248,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbx_crm" Height="24" Margin="442,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
         <Label x:Name="lbl_religiao" Content="Religião" HorizontalAlignment="Left" Margin="7.5,248,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox x:Name="tbx_religiao" Height="24" Margin="65.5,248,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_dianosticoMedico" Content="DIAGNÓSTICO MÉDICO" HorizontalAlignment="Left" Margin="20,284,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="lbl_1" Content="1" HorizontalAlignment="Left" Margin="20,314,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.479,0.5"/>
-        <TextBox x:Name="tbx_diagnostico1" HorizontalAlignment="Left" Height="24" Margin="44,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_cid1" Content="CID" HorizontalAlignment="Left" Margin="302,314,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbx_cid1" HorizontalAlignment="Left" Height="24" Margin="337,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_2" Content="2" HorizontalAlignment="Left" Margin="410,314,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.479,0.5"/>
-        <TextBox x:Name="tbx_diagnostico2" HorizontalAlignment="Left" Height="24" Margin="434,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.ColumnSpan="2" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_cid2" Content="CID" HorizontalAlignment="Left" Margin="155.5,314,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox x:Name="tbx_cid2" Height="24" Margin="187.5,314,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_3" Content="3" HorizontalAlignment="Left" Margin="20,348,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.479,0.5"/>
-        <TextBox x:Name="tbx_diagnostico3" HorizontalAlignment="Left" Height="24" Margin="44,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_cid3" Content="CID" HorizontalAlignment="Left" Margin="302,348,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbx_cid4" HorizontalAlignment="Left" Height="24" Margin="337,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_4" Content="4" HorizontalAlignment="Left" Margin="410,348,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.479,0.5"/>
-        <TextBox x:Name="tbx_diagnostico4" HorizontalAlignment="Left" Height="24" Margin="434,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.ColumnSpan="2" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_cid4" Content="CID" HorizontalAlignment="Left" Margin="155.5,348,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox x:Name="tbx_cid3" Height="24" Margin="187.5,348,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_dataDaAdmissao" Content="Data da Admissão" HorizontalAlignment="Left" Margin="20,394,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbx_dataDaAdmissao" HorizontalAlignment="Left" Height="22" Margin="130,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Label x:Name="lbl_avaliacoesPaciente" Content="Avaliações" HorizontalAlignment="Left" Margin="238,394,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbx_avaliacoesPaciente" Margin="307,394,129,0" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Button x:Name="btn_avaliar" Grid.ColumnSpan="2" Content="Avaliar" HorizontalAlignment="Left" Margin="523,394,0,26" Width="75" Click="Btn_avaliar_Click"/>
-        <Button x:Name="btn_cancelPaciente" Content="Cancelar" Margin="78,394,105,26" Grid.Column="1"/>
-        <Button x:Name="btn_salvarPaciente" Content="Salvar" Margin="163,394,20,0" Height="26" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="tbx_religiao" Margin="66,248,20,0" TextWrapping="Wrap" Grid.Column="1" CharacterCasing="Upper" VerticalContentAlignment="Center" Height="24" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_dataDaAdmissao" Content="Data da Admissão" HorizontalAlignment="Left" Margin="23,250,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbx_dataDaAdmissao" HorizontalAlignment="Left" Height="22" Margin="133,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lbl_avaliacoesPaciente" Content="Avaliações" HorizontalAlignment="Left" Margin="297,250,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbx_avaliacoesPaciente" Margin="369,250,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="22" VerticalAlignment="Top"/>
+        <Button x:Name="btn_avaliar" Grid.ColumnSpan="2" Content="Avaliar" HorizontalAlignment="Left" Margin="523,299,0,0" Width="75" Click="Btn_avaliar_Click" Height="26" VerticalAlignment="Top"/>
+        <Button x:Name="btn_cancelPaciente" Content="Cancelar" Margin="78,299,105,0" Grid.Column="1" Click="Btn_cancelPaciente_Click" Height="26" VerticalAlignment="Top"/>
+        <Button x:Name="btn_salvarPaciente" Content="Salvar" Margin="163,299,20,0" Height="26" VerticalAlignment="Top" Grid.Column="1" Click="Btn_salvarPaciente_Click"/>
         <Button Grid.Column="1" Margin="216,94,20,0" VerticalAlignment="Top" Height="22" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="{x:Null}" Click="Button_Click">
             <Image Source="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\buscaCEP.ico"/>
         </Button>
-        <Button x:Name="btn_anamnesePaciente" Content="Anamnese" HorizontalAlignment="Left" Margin="435,394,0,26" Width="75" Click="Btn_anamnesePaciente_Click"/>
+        <Button x:Name="btn_anamnesePaciente" Content="Anamnese" HorizontalAlignment="Left" Margin="435,299,0,0" Width="75" Click="Btn_anamnesePaciente_Click" Height="26" VerticalAlignment="Top"/>
     </Grid>
 </Window>

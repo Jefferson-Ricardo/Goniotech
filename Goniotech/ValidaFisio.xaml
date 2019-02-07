@@ -5,14 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Goniotech"
         mc:Ignorable="d"
-        Title="Login" Height="200" Width="300">
+        Title="Login" Height="200" Width="300"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        >
     <Grid>
-        <Label x:Name="lbl_validaFisioterapeuta" Content="Fisioterapeuta" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top"/>
-        <TextBox Height="20" Margin="20,40,20,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbx_nomeFisioterapeuta" Height="20" Margin="20,40,20,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="tbx_senhaFisioterapeuta" Margin="20,94,20,0" Height="20" VerticalAlignment="Top"/>
         <Button x:Name="btn_validarFisio" Content="Validar" Margin="212,129,0,0" Click="Btn_validarFisio_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60"/>
+        <Button x:Name="btn_cancelarValidarFisio" Content="Cancelar" Margin="142,129,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60" Click="Btn_cancelarValidarFisio_Click"/>
+        <Label x:Name="lbl_validaFisioterapeuta" Content="Fisioterapeuta" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_senhaValidaFisio" Content="Senha" HorizontalAlignment="Left" Margin="15,70,0,0" VerticalAlignment="Top"/>
-        <PasswordBox Margin="20,94,20,0" Height="20" VerticalAlignment="Top"/>
-        <Button x:Name="btn_cancelarValidarFisio" Content="Cancelar" Margin="142,129,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60"/>
+        
+        
 
     </Grid>
 </Window>

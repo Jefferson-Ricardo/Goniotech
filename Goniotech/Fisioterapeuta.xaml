@@ -14,9 +14,9 @@
         <Label x:Name="lbl_nomeFisioterapeuta" Content="Nome" HorizontalAlignment="Left" Margin="20,55,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbx_nomeFisioterapeuta" Height="23" Margin="73,55,20,0" TextWrapping="Wrap" VerticalAlignment="Top" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
         <Label x:Name="lbl_registro" Content="Registro" HorizontalAlignment="Left" Margin="20,95,0,0" VerticalAlignment="Top"/>
-        <TextBox Height="23" Margin="79,96,276,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="tbx_registro" Height="23" Margin="79,96,276,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Label x:Name="lbl_especialidade" Content="Especialidade" HorizontalAlignment="Left" Margin="224,96,0,0" VerticalAlignment="Top"/>
-        <ComboBox Margin="312,97,20,0" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+        <ComboBox x:Name="cbx_especialidade" Margin="312,97,20,0" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
             <ComboBoxItem>NEUROLOGIA</ComboBoxItem>
             <ComboBoxItem>ONCOLOGIA</ComboBoxItem>
             <ComboBoxItem>ORTOPEDIA</ComboBoxItem>
@@ -26,7 +26,7 @@
         <PasswordBox x:Name="pbx_senha" HorizontalAlignment="Left" Margin="73,134,0,0" Width="143" PasswordChar="*" MaxLength="6" Height="23" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Label x:Name="lbl_confirmSenha" Content="Confirme a Senha" HorizontalAlignment="Left" Margin="224,134,0,0" VerticalAlignment="Top"/>
         <PasswordBox x:Name="pbx_confirmSenha" Margin="328,134,20,0" PasswordChar="*" MaxLength="6" Height="23" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button x:Name="btn_cancelFisioterapeuta" Content="Cancelar" HorizontalAlignment="Left" Margin="303,175,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btn_saveFisioterapeuta" Content="Salvar" Margin="397,175,20,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_cancelFisioterapeuta" Content="Cancelar" HorizontalAlignment="Left" Margin="303,175,0,0" VerticalAlignment="Top" Width="75" Click="Btn_cancelFisioterapeuta_Click"/>
+        <Button x:Name="btn_saveFisioterapeuta" Content="Salvar" Margin="397,175,20,0" VerticalAlignment="Top" Click="Btn_saveFisioterapeuta_Click"/>
     </Grid>
 </Window>
