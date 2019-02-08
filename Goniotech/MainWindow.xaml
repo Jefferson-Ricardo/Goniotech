@@ -28,8 +28,14 @@
                 <ImageBrush ImageSource="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\consulta.ico" Stretch="Uniform" AlignmentX="Left"/>
             </Button.Background>
         </Button>
+        <Button x:Name="btn_relatorio" Content="Relatório" Margin="10,319,0,0" Click="Btn_consulta_Click" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" HorizontalContentAlignment="Right" BorderBrush="{x:Null}" Cursor="Hand" ToolTip="Consulta">
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\relatorio.ico" Stretch="Uniform" AlignmentX="Left"/>
+            </Button.Background>
+        </Button>
         <Label Content="SISTEMA DE AVALIAÇÃO GONIOMÉTRICA" Margin="150,26,150,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="{x:Null}" Foreground="#FFAA0000"/>
         <Separator Height="36" Margin="0,51,0,0" VerticalAlignment="Top"/>
+        
 
     </Grid>
 </Window>

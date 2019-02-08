@@ -15,7 +15,13 @@
         <TextBox x:Name="tbx_nomeFisioterapeuta" Height="23" Margin="73,55,92,0" TextWrapping="Wrap" VerticalAlignment="Top" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
         <RadioButton x:Name="rbtn_buscaFisioterapeuta" Content="Fisioterapeuta" HorizontalAlignment="Left" Margin="185,96,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="rbtn_buscaPaciente" Content="Paciente" HorizontalAlignment="Left" Margin="329,97,0,0" VerticalAlignment="Top"/>
-        <DataGrid Margin="20,129,20,20"/>
         <Button x:Name="btn_busca" Content="Buscar" Margin="510,55,20,0" Height="23" VerticalAlignment="Top"/>
+        <ListView Margin="20,136,18,20">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
