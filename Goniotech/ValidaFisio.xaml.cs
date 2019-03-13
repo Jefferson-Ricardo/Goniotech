@@ -24,6 +24,7 @@ namespace Goniotech
     {
 
         // Variaveis Globais
+        public string nome { get; set; }
         public string fisioterapeuta { get; set; }
         string senha;
 
@@ -32,10 +33,11 @@ namespace Goniotech
         private string strConn = "Data Source=LAPTOP-5MI2R6SG\\SQLEXPRESS;Initial Catalog=Goniotech;Integrated Security=True";
         private string _Sql = String.Empty;
 
-        public ValidaFisio()
+        public ValidaFisio(string nome)
         {
             InitializeComponent();
             tbx_nomeFisioterapeuta.Focus();
+            nome = nome;
         }
 
         private void Btn_validarFisio_Click(object sender, RoutedEventArgs e)
@@ -69,7 +71,7 @@ namespace Goniotech
                 
                 if (v > 0)
                 {
-                    Kinect.MainWindow avaliar = new Kinect.MainWindow();
+                    Kinect.MainWindow avaliar = new Kinect.MainWindow(fisioterapeuta, nome);
                     this.Hide();
                     avaliar.ShowDialog();
                 } else

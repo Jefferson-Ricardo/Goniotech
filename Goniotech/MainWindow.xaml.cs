@@ -26,8 +26,6 @@ namespace Goniotech
             
         }
 
-        
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Paciente cadastrarPaciente = new Paciente();

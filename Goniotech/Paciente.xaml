@@ -41,7 +41,7 @@
         <TextBox x:Name="tbx_estadoPaciente" Height="23" Margin="450,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" CharacterCasing="Upper" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Label x:Name="lbl_telefonePaciente" Content="Telefone" HorizontalAlignment="Left" Margin="7.5,170,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBox x:Name="tbx_dddPaciente" HorizontalAlignment="Left" Height="23" Margin="65.5,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Grid.Column="1" MaxLength="2" TextAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="tbx_telefonePaciente" Height="23" Margin="117.5,170,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" TextAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="tbx_telefonePaciente" Height="23" Margin="117.5,170,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" TextAlignment="Center" VerticalContentAlignment="Center" MaxLength="10"/>
         <Label x:Name="lbl_profissaoPaciente" Content="Profissão" HorizontalAlignment="Left" Margin="20,210,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbx_profissaoPaciente" HorizontalAlignment="Left" Height="22" Margin="79,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
         <Label x:Name="lbl_ocupacaoAtual" Content="Ocupação Atual" HorizontalAlignment="Left" Margin="273,209,0,0" VerticalAlignment="Top"/>
@@ -57,7 +57,7 @@
             <ComboBoxItem>Outro</ComboBoxItem>
         </ComboBox>
         <Label x:Name="lbl_outro" Content="Outro" HorizontalAlignment="Left" Margin="7.5,209,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox x:Name="tbx_outro" Height="23" Margin="54.5,210,20,0" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Grid.Column="1" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="tbx_outro" Height="23" Margin="54.5,210,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" CharacterCasing="Upper" VerticalContentAlignment="Center" IsUndoEnabled="False" IsEnabled="False"/>
         <Label x:Name="lbl_religiao" Content="Religião" HorizontalAlignment="Left" Margin="7.5,248,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBox x:Name="tbx_religiao" Margin="66,248,20,0" TextWrapping="Wrap" Grid.Column="1" CharacterCasing="Upper" VerticalContentAlignment="Center" Height="24" VerticalAlignment="Top"/>
         <Label x:Name="lbl_dataDaAdmissao" Content="Data da Admissão" HorizontalAlignment="Left" Margin="23,250,0,0" VerticalAlignment="Top"/>

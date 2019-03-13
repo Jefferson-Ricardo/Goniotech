@@ -18,6 +18,7 @@ using Correios;
 
 
 
+
 namespace Goniotech
 {
     /// <summary>
@@ -28,11 +29,10 @@ namespace Goniotech
         public Paciente()
         {
             InitializeComponent();
-
-            
         }
 
         //VARIAVEIS GLOBAIS
+
         public string nome { get; set; }
         string sexo { get; set; }
         string dataDeNascimento { get; set; }
@@ -55,8 +55,6 @@ namespace Goniotech
         SqlConnection sqlConn = null;
         private string strConn = "Data Source=LAPTOP-5MI2R6SG\\SQLEXPRESS;Initial Catalog=Goniotech;Integrated Security=True";
         private string _Sql = String.Empty;
-
-
 
         private void LocalizarCEP()
         {
@@ -86,7 +84,7 @@ namespace Goniotech
         private void Btn_avaliar_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Para avaliar, faça login!", "Login");
-            ValidaFisio validaFisio = new ValidaFisio();
+            ValidaFisio validaFisio = new ValidaFisio(nome);
             validaFisio.ShowDialog();
             
         }
@@ -188,10 +186,18 @@ namespace Goniotech
 
         private void Cbx_ocupacaoAtual_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(cbx_ocupacaoAtual.Text == "Outro")
+
+            if (cbx_ocupacaoAtual.SelectedItem.ToString().Trim() == "Outro")
             {
+              
                 tbx_outro.IsEnabled = true;
             }
+            /*if(cbx_ocupacaoAtual.SelectedItem.ToString().Trim() == "Outro")
+            {
+                tbx_outro.IsEnabled = true;
+            }*/
         }
+
+        
     }
 }
