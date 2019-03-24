@@ -68,7 +68,7 @@
         <Button x:Name="btn_cancelPaciente" Content="Cancelar" Margin="78,299,105,0" Grid.Column="1" Click="Btn_cancelPaciente_Click" Height="26" VerticalAlignment="Top"/>
         <Button x:Name="btn_salvarPaciente" Content="Salvar" Margin="163,299,20,0" Height="26" VerticalAlignment="Top" Grid.Column="1" Click="Btn_salvarPaciente_Click"/>
         <Button Grid.Column="1" Margin="216,94,20,0" VerticalAlignment="Top" Height="22" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="{x:Null}" Click="Button_Click">
-            <Image Source="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\buscaCEP.ico"/>
+            <Image Source="C:\Users\DeLL\source\repos\Goniotech\Goniotech\Icons\buscaCEP.ico"/>
         </Button>
         <Button x:Name="btn_anamnesePaciente" Content="Anamnese" HorizontalAlignment="Left" Margin="435,299,0,0" Width="75" Click="Btn_anamnesePaciente_Click" Height="26" VerticalAlignment="Top"/>
     </Grid>
