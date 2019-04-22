@@ -12,25 +12,25 @@
         >
     <Grid>
 
-        <Image Source="C:\Users\DeLL\source\repos\Goniotech\Goniotech\Images\Logo.png" Margin="0,70,0,0" Opacity="0.3"/>
+        <Image Source="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Images\Logo.png" Margin="0,70,0,0" Opacity="0.3"/>
         <Button x:Name="btn_cadastrarPaciente" Content="Paciente" Margin="10,80,0,0" Click="Button_Click" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" BorderBrush="{x:Null}" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" Cursor="Hand" FontSize="14" ToolTip="Cadastrar Paciente">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\DeLL\source\repos\Goniotech\Goniotech\Icons\paciente.ico" AlignmentX="Left" Stretch="Uniform"/>
+                <ImageBrush ImageSource="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\paciente.ico" AlignmentX="Left" Stretch="Uniform"/>
             </Button.Background>
         </Button>
         <Button x:Name="btn_cadastrarFisioterapeuta" Content="Fisioterapeuta" Margin="10,160,0,0" Click="Btn_cadastrarFisioterapeuta_Click" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" BorderBrush="{x:Null}" HorizontalContentAlignment="Right" Cursor="Hand" ToolTip="Cadastrar Fisioterapeuta">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\DeLL\source\repos\Goniotech\Goniotech\Icons\fisioterapeuta.ico" Stretch="Uniform" AlignmentX="Left"/>
+                <ImageBrush ImageSource="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\fisioterapeuta.ico" Stretch="Uniform" AlignmentX="Left"/>
             </Button.Background>
         </Button>
         <Button x:Name="btn_consulta" Content="Consulta" Margin="10,240,0,0" Click="Btn_consulta_Click" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" HorizontalContentAlignment="Right" BorderBrush="{x:Null}" Cursor="Hand" ToolTip="Consulta">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\DeLL\source\repos\Goniotech\Goniotech\Icons\consulta.ico" Stretch="Uniform" AlignmentX="Left"/>
+                <ImageBrush ImageSource="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\consulta.ico" Stretch="Uniform" AlignmentX="Left"/>
             </Button.Background>
         </Button>
         <Button x:Name="btn_relatorio" Content="Relatório" Margin="10,319,0,0" Click="Btn_consulta_Click" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" HorizontalContentAlignment="Right" BorderBrush="{x:Null}" Cursor="Hand" ToolTip="Consulta">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\DeLL\source\repos\Goniotech\Goniotech\Icons\relatorio.ico" Stretch="Uniform" AlignmentX="Left"/>
+                <ImageBrush ImageSource="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\relatorio.ico" Stretch="Uniform" AlignmentX="Left"/>
             </Button.Background>
         </Button>
         <Label Content="SISTEMA DE AVALIAÇÃO GONIOMÉTRICA" Margin="150,26,150,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontWeight="Bold" Background="{x:Null}" Foreground="#FFAA0000"/>
