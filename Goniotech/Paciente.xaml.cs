@@ -15,46 +15,43 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Kinect;
 using Correios;
+using MySql.Data.MySqlClient;
 
 
 
 
 namespace Goniotech
 {
-    /// <summary>
-    /// Interaction logic for paciente.xaml
-    /// </summary>
+    
     public partial class Paciente : Window
     {
+
+        
+
+        //VARIAVEIS GLOBAIS
+        public string nome { get; set; }
+        public string sexo { get; set; }
+        public string dtNasc { get; set; }
+        public string idade { get; set; }
+        public string cep { get; set; }
+        public string rua { get; set; }
+        public string numero { get; set; }
+        public string bairro { get; set; }
+        public string cidade { get; set; }
+        public string dtAdmissao { get; set; }
+        public string dtAvaliacao { get; set; }
+        public string uf { get; set; }
+        public string telDDD { get; set; }
+        public string telNumero { get; set; }
+        public string profissao { get; set; }
+        public string ocupacaoAtual { get; set; }
+        public string outro { get; set; }
+        public string religiao { get; set; }
+
         public Paciente()
         {
             InitializeComponent();
         }
-
-        //VARIAVEIS GLOBAIS
-
-        public string nome { get; set; }
-        string sexo { get; set; }
-        string dataDeNascimento { get; set; }
-        string idade { get; set; }
-        string cep { get; set; }
-        string rua { get; set; }
-        string numero { get; set; }
-        string bairro { get; set; }
-        string cidade { get; set; }
-        string uf { get; set; }
-        string telefoneDDD { get; set; }
-        string telefoneNumero { get; set; }
-        string profissao { get; set; }
-        string ocupacaoAtual { get; set; }
-        string outro { get; set; }
-        string religiao { get; set; }
-        string dataAdmissao { get; set; }
-
-        // Instância da Conexão
-        SqlConnection sqlConn = null;
-        private string strConn = "Data Source=LAPTOP-5MI2R6SG\\SQLEXPRESS;Initial Catalog=Goniotech;Integrated Security=True";
-        private string _Sql = String.Empty;
 
         private void LocalizarCEP()
         {
@@ -101,72 +98,76 @@ namespace Goniotech
             this.Close();
         }
 
-        private void Btn_salvarPaciente_Click(object sender, RoutedEventArgs e)
+        public void salvar ()
         {
-            sqlConn = new SqlConnection(strConn);
+            nome = tbx_nomePaciente.Text;
+            sexo = cbx_sexoPaciente.Text;
+            dtNasc = dataNasc.Text;
+            idade = tbx_idadePaciente.Text;
+            cep = tbx_CEP.Text;
+            rua = tbx_enderecoPaciente.Text;
+            numero = tbx_numeroPaciente.Text;
+            bairro = tbx_bairroPaciente.Text;
+            cidade = tbx_cidadePaciente.Text;
+            uf = tbx_estadoPaciente.Text;
+            telDDD = tbx_dddPaciente.Text;
+            telNumero = tbx_telefonePaciente.Text;
+            profissao = tbx_profissaoPaciente.Text;
+            ocupacaoAtual = cbx_ocupacaoAtual.Text;
+            outro = tbx_outro.Text;
+            religiao = tbx_religiao.Text;
+            dtAdmissao = dataAdm.Text;
+            dtAvaliacao = cbx_avaliacoesPaciente.Text;
 
+            
             try
             {
-                //Atribuição das TextBox nas variaveis
-                nome = tbx_nomePaciente.Text;
-                sexo = cbx_sexoPaciente.Text;
-                dataDeNascimento = tbx_dataDeNascimento.Text;
-                idade = tbx_idadePaciente.Text;
-                cep = tbx_CEP.Text;
-                rua = tbx_enderecoPaciente.Text;
-                numero = tbx_numeroPaciente.Text;
-                bairro = tbx_bairroPaciente.Text;
-                cidade = tbx_cidadePaciente.Text;
-                uf = tbx_estadoPaciente.Text;
-                telefoneDDD = tbx_dddPaciente.Text;
-                telefoneNumero = tbx_numeroPaciente.Text;
-                profissao = tbx_profissaoPaciente.Text;
-                ocupacaoAtual = cbx_ocupacaoAtual.Text;
-                outro = tbx_outro.Text;
-                religiao = tbx_religiao.Text;
-                dataAdmissao = tbx_dataDaAdmissao.Text;
+                string configuracao = "DATABASE=goniotec_goniotech; SERVER=bdhost0040.servidorwebfacil.com; UID=goniotec_admin; PWD=goniotech123456";
+                MySqlConnection conexao = new MySqlConnection(configuracao);
+                conexao.Open();               
+                MySqlCommand comando = new MySqlCommand("INSERT INTO paciente (nome, sexo, dtNasc, telDdd, telNumero, profissao, ocupacaoAtual, outro, religiao, dtAdmissao, dtAvaliacao, cep, rua, numero, bairro, cidade, uf) VALUES (@nome, @sexo, @dtNasc, @telDdd, @telNumero, @profissao, @ocupacaoAtual, @outro, @religiao, @dtAdmissao, @dtAvaliacao, @cep, @rua, @numero, @bairro, @cidade, @uf)", conexao);
+                comando.Parameters.Add("@nome", MySqlDbType.VarChar, 300).Value = nome;
+                comando.Parameters.Add("@sexo", MySqlDbType.VarChar, 15).Value = sexo;
+                comando.Parameters.Add("@dtNasc", MySqlDbType.VarChar, 10).Value = dtNasc;
+                comando.Parameters.Add("@telDdd", MySqlDbType.VarChar, 3).Value = telDDD;
+                comando.Parameters.Add("@telNumero", MySqlDbType.VarChar, 11).Value = telNumero;
+                comando.Parameters.Add("@profissao", MySqlDbType.VarChar, 200).Value = profissao;
+                comando.Parameters.Add("@ocupacaoAtual", MySqlDbType.VarChar, 200).Value = ocupacaoAtual;
+                comando.Parameters.Add("@outro", MySqlDbType.VarChar, 200).Value = outro;
+                comando.Parameters.Add("@religiao", MySqlDbType.VarChar, 200).Value = religiao;
+                comando.Parameters.Add("@dtAdmissao", MySqlDbType.VarChar, 10).Value = dtAdmissao;
+                comando.Parameters.Add("@dtAvaliacao", MySqlDbType.VarChar, 10).Value = dtAvaliacao;
+                comando.Parameters.Add("@cep", MySqlDbType.VarChar, 20).Value = cep;
+                comando.Parameters.Add("@rua", MySqlDbType.VarChar, 200).Value = rua;
+                comando.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = numero;
+                comando.Parameters.Add("@bairro", MySqlDbType.VarChar, 200).Value = bairro;
+                comando.Parameters.Add("@cidade", MySqlDbType.VarChar, 200).Value = cidade;
+                comando.Parameters.Add("@uf", MySqlDbType.VarChar, 3).Value = uf;
+                comando.ExecuteNonQuery();
+                conexao.Close();
 
-                //COMANDOS PARA CONEXÃO SQLSERVER
-                _Sql = "INSERT INTO paciente (nome_paciente, sexo_paciente, dt_nascimento, cep, rua, numero, bairro, cidade, uf, telefone_ddd, telefone_numero, profissao, ocupacao_atual, outro, religiao, dt_admissao) " +
-                       "VALUES (@nome, @sexo, @dataDeNascimento, @cep, @rua, @numero, @bairro, @cidade, @uf, @telefoneDDD, @telefoneNumero, @profissao, @ocupacaoAtual, @outro, @religiao, @dataAdmissao)";
-                SqlCommand cmd = new SqlCommand(_Sql, sqlConn);
-                cmd.Parameters.Add(new SqlParameter("@nome", nome));
-                cmd.Parameters.Add(new SqlParameter("@sexo", sexo));
-                cmd.Parameters.Add(new SqlParameter("@dataDeNascimento", dataDeNascimento));
-                cmd.Parameters.Add(new SqlParameter("@cep", cep));
-                cmd.Parameters.Add(new SqlParameter("@rua", rua));
-                cmd.Parameters.Add(new SqlParameter("@numero", numero));
-                cmd.Parameters.Add(new SqlParameter("@bairro", bairro));
-                cmd.Parameters.Add(new SqlParameter("@cidade", cidade));
-                cmd.Parameters.Add(new SqlParameter("@uf", uf));
-                cmd.Parameters.Add(new SqlParameter("@telefoneDDD", telefoneDDD));
-                cmd.Parameters.Add(new SqlParameter("@telefoneNumero", telefoneNumero));
-                cmd.Parameters.Add(new SqlParameter("@profissao", profissao));
-                cmd.Parameters.Add(new SqlParameter("@ocupacaoAtual", ocupacaoAtual));
-                cmd.Parameters.Add(new SqlParameter("@outro", outro));
-                cmd.Parameters.Add(new SqlParameter("@religiao", religiao));
-                cmd.Parameters.Add(new SqlParameter("@dataAdmissao", dataAdmissao));
-
-                sqlConn.Open();
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Paciente Cadastrado com Sucesso!");
-                LimpaCampos();
-
-            }
-            catch (SqlException erro)
+            } catch(Exception erro)
             {
-                MessageBox.Show(erro + "No banco");
-
+                throw erro;    
             }
-            sqlConn.Close();
+            
+
+
+            MessageBox.Show("Paciente Cadastrado com Sucesso!");
+            LimpaCampos();
+        }
+
+
+        private void Btn_salvarPaciente_Click(object sender, RoutedEventArgs e)
+        {
+            salvar();
         }
 
         private void LimpaCampos()
         {
             this.tbx_nomePaciente.Text = "";
             this.cbx_sexoPaciente.Text = "";
-            this.tbx_dataDeNascimento.Text = "";
+            this.dataNasc.Text = "";
             this.tbx_idadePaciente.Text = "";
             this.tbx_CEP.Text = "";
             this.tbx_enderecoPaciente.Text = "";
@@ -180,24 +181,23 @@ namespace Goniotech
             this.cbx_ocupacaoAtual.Text = "";
             this.tbx_outro.Text = "";
             this.tbx_religiao.Text = "";
-            this.tbx_dataDaAdmissao.Text = "";
+            this.dataAdm.Text = "";
 
         }
 
-        private void Cbx_ocupacaoAtual_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void calcularIdade(object sender, KeyEventArgs e)
         {
-
-            if (cbx_ocupacaoAtual.SelectedItem.ToString().Trim() == "Outro")
+            if (e.Key == Key.Tab)
             {
-              
-                tbx_outro.IsEnabled = true;
+                DateTime dtNasc, dtAtual;
+                TimeSpan idade;
+                dtNasc = DateTime.Parse(dataNasc.ToString());
+                dtAtual = DateTime.Now;
+                idade = dtAtual - dtNasc;
+                tbx_idadePaciente.Text = $"O Paciente tem {idade.Days / 30 / 12} anos";
             }
-            /*if(cbx_ocupacaoAtual.SelectedItem.ToString().Trim() == "Outro")
-            {
-                tbx_outro.IsEnabled = true;
-            }*/
+            
         }
 
-        
     }
 }

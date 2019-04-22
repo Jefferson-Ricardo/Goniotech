@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -13,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 
 namespace Goniotech
@@ -27,12 +29,7 @@ namespace Goniotech
         public string nome { get; set; }
         public string fisioterapeuta { get; set; }
         string senha;
-
-        // Instância da Conexão
-        SqlConnection sqlConn = null;
-        private string strConn = "Data Source=LAPTOP-5MI2R6SG\\SQLEXPRESS;Initial Catalog=Goniotech;Integrated Security=True";
-        private string _Sql = String.Empty;
-
+        
         public ValidaFisio(string nome)
         {
             InitializeComponent();
@@ -40,9 +37,14 @@ namespace Goniotech
             nome = nome;
         }
 
-        private void Btn_validarFisio_Click(object sender, RoutedEventArgs e)
+        private void validaFisio ()
         {
             logar();
+        }
+
+        private void Btn_validarFisio_Click(object sender, RoutedEventArgs e)
+        {
+            validaFisio();
         }
 
         private void Btn_cancelarValidarFisio_Click(object sender, RoutedEventArgs e)
@@ -52,29 +54,32 @@ namespace Goniotech
 
         private void logar()
         {
-            sqlConn = new SqlConnection(strConn);
 
+            //Atribuição das TextBox nas variaveis
+            fisioterapeuta = tbx_nomeFisioterapeuta.Text;
+            senha = pbx_senhaFisioterapeuta.Password.ToString();
+            string user = null;
+
+            //COMANDOS PARA CONEXÃO MySql
+            string configuracao = "DATABASE=goniotec_goniotech; SERVER=bdhost0040.servidorwebfacil.com; UID=goniotec_admin; PWD=goniotech123456";
+            MySqlConnection conexao = new MySqlConnection(configuracao);
             try
             {
-                //Atribuição das TextBox nas variaveis
-                fisioterapeuta = tbx_nomeFisioterapeuta.Text;
-                senha = tbx_senhaFisioterapeuta.Password;
-                string user = null;
+                if (conexao.State == ConnectionState.Closed)
+                conexao.Open();
+                String mySqlCmd = "SELECT COUNT(idFisio) FROM fisioterapeuta WHERE nomeFisio = @fisioterapeuta AND senha = @senha";
+                MySqlCommand comando = new MySqlCommand(mySqlCmd, conexao);
+                comando.Parameters.AddWithValue("@fisioterapeuta", fisioterapeuta);
+                comando.Parameters.AddWithValue("@senha", senha);
+                int v = Convert.ToInt32 (comando.ExecuteScalar());
 
-                //COMANDOS PARA CONEXÃO SQLSERVER
-                _Sql = "SELECT COUNT(nome_fisioterapeuta) FROM cadastro_fisioterapeuta WHERE nome_fisioterapeuta = @fisioterapeuta AND senha_fisioterapeuta = @senha";
-                SqlCommand cmd = new SqlCommand(_Sql, sqlConn);
-                cmd.Parameters.Add("@fisioterapeuta", SqlDbType.VarChar).Value = fisioterapeuta;
-                cmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = senha;
-                sqlConn.Open();
-                int v = (int)cmd.ExecuteScalar();
-                
                 if (v > 0)
                 {
                     Kinect.MainWindow avaliar = new Kinect.MainWindow(fisioterapeuta, nome);
                     this.Hide();
                     avaliar.ShowDialog();
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Verifique suas credenciais!");
                 }
@@ -92,14 +97,14 @@ namespace Goniotech
                     user += fisioterapeuta.Substring(1, fisioterapeuta.Length - 1).ToLower();
                 }
 
-
+                conexao.Close();
             }
-            catch (SqlException erro)
+            catch (Exception erro)
             {
                 MessageBox.Show(erro + "No banco");
 
             }
-            sqlConn.Close();
+            
         }
 
     }

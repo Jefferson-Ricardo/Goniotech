@@ -12,69 +12,62 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+
 
 namespace Goniotech
 {
-    /// <summary>
-    /// Interaction logic for Fisioterapeuta.xaml
     /// </summary>
     public partial class Fisioterapeuta : Window
     {
-        //VARIAVEIS GLOBAIS
-        string nomeFisioterapeuta { get; set; }
-        string registro { get; set; }
-        string especialidade { get; set; }
-        string senha { get; set; }
+        public string NomeFisio { get; set; }
+        public string Registro { get; set; }
+        public string Especialidade { get; set; }
+        public string Senha { get; set; }
+        public string ConfirmSenha { get; set; }
+        public int Length { get; set; }
 
         public Fisioterapeuta()
         {
             InitializeComponent();
         }
 
-        // Instância da Conexão
-        SqlConnection sqlConn = null;
-        private string strConn = "Data Source=LAPTOP-5MI2R6SG\\SQLEXPRESS;Initial Catalog=Goniotech;Integrated Security=True";
-        private string _Sql = String.Empty;
 
-        private void Btn_saveFisioterapeuta_Click(object sender, RoutedEventArgs e)
+        private void salvarFisioterapeuta ()
         {
-            sqlConn = new SqlConnection(strConn);
+            
+            NomeFisio = tbx_nomeFisioterapeuta.Text;
+            Registro = tbx_registro.Text;
+            Especialidade = cbx_especialidade.Text;
+            Senha = pbx_senha.Password.ToString();
+            ConfirmSenha = pbx_confirmSenha.Password.ToString();
 
-            try
+            if (Senha != ConfirmSenha)
             {
-                //Atribuição das TextBox nas variaveis
-                nomeFisioterapeuta = tbx_nomeFisioterapeuta.Text;
-                senha = pbx_senha.Password;
-                registro = tbx_registro.Text;
-                especialidade = cbx_especialidade.Text;
+                MessageBox.Show("Os campos Senha e Confirmar senha devem ser iguais!");
+            }
+            else
+            {
+                string configuracao = "DATABASE=goniotec_goniotech; SERVER=bdhost0040.servidorwebfacil.com; UID=goniotec_admin; PWD=goniotech123456";
+                MySqlConnection conexao = new MySqlConnection(configuracao);
+                conexao.Open();
+                MySqlCommand comando = new MySqlCommand("INSERT INTO fisioterapeuta (nomeFisio, registro, especialidade, senha) VALUES (@nome, @registro, @especialidade, @senha)", conexao);
+                comando.Parameters.Add("@nome", MySqlDbType.VarChar, 200).Value = NomeFisio;
+                comando.Parameters.Add("@registro", MySqlDbType.VarChar, 10).Value = Registro;
+                comando.Parameters.Add("@especialidade", MySqlDbType.VarChar, 50).Value = Especialidade;
+                comando.Parameters.Add("@senha", MySqlDbType.VarChar, 15).Value = Senha;
+                comando.ExecuteNonQuery();
+                conexao.Close();
 
-                // Validação campos vazios
-                if (nomeFisioterapeuta == "" || senha == "" || registro == "" || especialidade == "")
-                {
-                    MessageBox.Show("Existe campos vazios!!");
-                    return;
-                }
-
-                //COMANDOS PARA CONEXÃO SQLSERVER
-                _Sql = "INSERT INTO cadastro_fisioterapeuta (nome_fisioterapeuta, registro_fisioterapeuta, especialidade_fisioterapeuta, senha_fisioterapeuta) VALUES (@nomeFisioterapeuta, @registroFisioterapeuta, @especialidadeFisioterapeuta, @senhaFisioterapeuta)";
-                SqlCommand cmd = new SqlCommand(_Sql, sqlConn);
-                cmd.Parameters.Add(new SqlParameter ("@nomeFisioterapeuta", nomeFisioterapeuta));
-                cmd.Parameters.Add(new SqlParameter("@registroFisioterapeuta", registro));
-                cmd.Parameters.Add(new SqlParameter("@especialidadeFisioterapeuta", especialidade));
-                cmd.Parameters.Add(new SqlParameter("@senhaFisioterapeuta", senha));
-                sqlConn.Open();
-                cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Fisioterapeuta Cadastrado com Sucesso!");
                 LimpaCampos();
-
             }
-            catch (SqlException erro)
-            {
-                MessageBox.Show(erro + "No banco");
+        }
 
-            }
-            sqlConn.Close();
+        private void Btn_saveFisioterapeuta_Click(object sender, RoutedEventArgs e)
+        {
+            salvarFisioterapeuta();
         }
 
         private void LimpaCampos()
@@ -91,5 +84,6 @@ namespace Goniotech
         {
             this.Close();
         }
+
     }
 }

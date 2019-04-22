@@ -24,7 +24,11 @@
             <ComboBoxItem>FEMININO</ComboBoxItem>
         </ComboBox>
         <Label x:Name="lbl_dataDeNascimento" Content="Data de Nascimento" HorizontalAlignment="Left" Margin="22,94,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbx_dataDeNascimento" HorizontalAlignment="Left" Height="23" Margin="145,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" TextAlignment="Center" VerticalContentAlignment="Center"/>
+        
+        <StackPanel Margin="139,95,250,312">
+            <DatePicker x:Name="dataNasc" DisplayDateStart="1900-01-01" KeyDown="calcularIdade"/>
+        </StackPanel>
+        
         <Label x:Name="lbl_idadePaciente" Content="Idade" HorizontalAlignment="Left" Margin="293,94,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbx_idadePaciente" Height="23" Margin="341,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" VerticalContentAlignment="Center"/>
         <Label x:Name="lbl_CEP" Content="CEP" HorizontalAlignment="Left" Margin="11.5,94,0,0" VerticalAlignment="Top" Grid.Column="1"/>
@@ -45,7 +49,7 @@
         <Label x:Name="lbl_profissaoPaciente" Content="Profissão" HorizontalAlignment="Left" Margin="20,210,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbx_profissaoPaciente" HorizontalAlignment="Left" Height="22" Margin="79,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" CharacterCasing="Upper" VerticalContentAlignment="Center"/>
         <Label x:Name="lbl_ocupacaoAtual" Content="Ocupação Atual" HorizontalAlignment="Left" Margin="273,209,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbx_ocupacaoAtual" Margin="368,210,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" SelectionChanged="Cbx_ocupacaoAtual_SelectionChanged">
+        <ComboBox x:Name="cbx_ocupacaoAtual" Margin="368,210,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center">
             <ComboBoxItem>Assalariado</ComboBoxItem>
             <ComboBoxItem>Autônomo</ComboBoxItem>
             <ComboBoxItem>Não assalariado</ComboBoxItem>
@@ -57,11 +61,13 @@
             <ComboBoxItem>Outro</ComboBoxItem>
         </ComboBox>
         <Label x:Name="lbl_outro" Content="Outro" HorizontalAlignment="Left" Margin="7.5,209,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox x:Name="tbx_outro" Height="23" Margin="54.5,210,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" CharacterCasing="Upper" VerticalContentAlignment="Center" IsUndoEnabled="False" IsEnabled="False"/>
+        <TextBox x:Name="tbx_outro" Height="23" Margin="54.5,210,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" CharacterCasing="Upper" VerticalContentAlignment="Center" IsUndoEnabled="False"/>
         <Label x:Name="lbl_religiao" Content="Religião" HorizontalAlignment="Left" Margin="7.5,248,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBox x:Name="tbx_religiao" Margin="66,248,20,0" TextWrapping="Wrap" Grid.Column="1" CharacterCasing="Upper" VerticalContentAlignment="Center" Height="24" VerticalAlignment="Top"/>
         <Label x:Name="lbl_dataDaAdmissao" Content="Data da Admissão" HorizontalAlignment="Left" Margin="23,250,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbx_dataDaAdmissao" HorizontalAlignment="Left" Height="22" Margin="133,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <StackPanel Margin="136,250,253,157">
+            <DatePicker x:Name="dataAdm" DisplayDateStart="1900-01-01"/>
+        </StackPanel>
         <Label x:Name="lbl_avaliacoesPaciente" Content="Avaliações" HorizontalAlignment="Left" Margin="297,250,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbx_avaliacoesPaciente" Margin="369,250,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="22" VerticalAlignment="Top"/>
         <Button x:Name="btn_avaliar" Grid.ColumnSpan="2" Content="Avaliar" HorizontalAlignment="Left" Margin="523,299,0,0" Width="75" Click="Btn_avaliar_Click" Height="26" VerticalAlignment="Top"/>

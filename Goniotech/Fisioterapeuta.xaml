@@ -23,9 +23,9 @@
             <ComboBoxItem>REUMATOLOGIA</ComboBoxItem>
         </ComboBox>
         <Label x:Name="lbl_senha" Content="Senha" HorizontalAlignment="Left" Margin="21,134,0,0" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="pbx_senha" HorizontalAlignment="Left" Margin="73,134,0,0" Width="143" PasswordChar="*" MaxLength="6" Height="23" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <PasswordBox x:Name="pbx_senha" HorizontalAlignment="Left" Margin="73,134,0,0" Width="143" MaxLength="6" Height="23" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Label x:Name="lbl_confirmSenha" Content="Confirme a Senha" HorizontalAlignment="Left" Margin="224,134,0,0" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="pbx_confirmSenha" Margin="328,134,20,0" PasswordChar="*" MaxLength="6" Height="23" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <PasswordBox x:Name="pbx_confirmSenha" Margin="328,134,20,0" MaxLength="6" Height="23" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Button x:Name="btn_cancelFisioterapeuta" Content="Cancelar" HorizontalAlignment="Left" Margin="303,175,0,0" VerticalAlignment="Top" Width="75" Click="Btn_cancelFisioterapeuta_Click"/>
         <Button x:Name="btn_saveFisioterapeuta" Content="Salvar" Margin="397,175,20,0" VerticalAlignment="Top" Click="Btn_saveFisioterapeuta_Click"/>
     </Grid>
