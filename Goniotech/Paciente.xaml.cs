@@ -25,9 +25,6 @@ namespace Goniotech
     
     public partial class Paciente : Window
     {
-
-        
-
         //VARIAVEIS GLOBAIS
         public string nome { get; set; }
         public string sexo { get; set; }
@@ -80,6 +77,7 @@ namespace Goniotech
 
         private void Btn_avaliar_Click(object sender, RoutedEventArgs e)
         {
+            nome = tbx_nomePaciente.Text;
             MessageBoxResult result = MessageBox.Show("Para avaliar, faça login!", "Login");
             ValidaFisio validaFisio = new ValidaFisio(nome);
             validaFisio.ShowDialog();
@@ -154,7 +152,7 @@ namespace Goniotech
 
 
             MessageBox.Show("Paciente Cadastrado com Sucesso!");
-            LimpaCampos();
+            
         }
 
 

@@ -8,6 +8,7 @@
         Title="Fisioterapeuta" Height="250" Width="500"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
+        Icon="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\Fisioterapeuta.ico"
         >
     <Grid>
         <Label x:Name="lbl_cadastroFisioterapeuta" Content="CADASTRO DE FISIOTERAPEUTA" Margin="140,17,140,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontWeight="Bold"/>

@@ -62,6 +62,7 @@ namespace Goniotech
 
                 MessageBox.Show("Fisioterapeuta Cadastrado com Sucesso!");
                 LimpaCampos();
+                Close();
             }
         }
 

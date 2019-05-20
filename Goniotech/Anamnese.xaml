@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Anamnese" Height="590" Width="800"
         WindowStyle="SingleBorderWindow"
-        
+        Icon="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\Anamnese.ico"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         >

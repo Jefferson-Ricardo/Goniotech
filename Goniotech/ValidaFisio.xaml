@@ -8,6 +8,7 @@
         Title="Login" Height="200" Width="300"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
+        Icon="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\Login.ico"
         >
     <Grid>
         <TextBox x:Name="tbx_nomeFisioterapeuta" Height="20" Margin="20,40,20,0" TextWrapping="Wrap" VerticalAlignment="Top"/>

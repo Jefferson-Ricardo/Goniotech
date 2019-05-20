@@ -26,15 +26,20 @@ namespace Goniotech
     {
 
         // Variaveis Globais
-        public string nome { get; set; }
+        public string user { get; set; }
         public string fisioterapeuta { get; set; }
         string senha;
         
+        public ValidaFisio()
+        {
+            InitializeComponent();
+        }
+
         public ValidaFisio(string nome)
         {
             InitializeComponent();
             tbx_nomeFisioterapeuta.Focus();
-            nome = nome;
+            user = nome;
         }
 
         private void validaFisio ()
@@ -58,7 +63,7 @@ namespace Goniotech
             //Atribuição das TextBox nas variaveis
             fisioterapeuta = tbx_nomeFisioterapeuta.Text;
             senha = pbx_senhaFisioterapeuta.Password.ToString();
-            string user = null;
+            
 
             //COMANDOS PARA CONEXÃO MySql
             string configuracao = "DATABASE=goniotec_goniotech; SERVER=bdhost0040.servidorwebfacil.com; UID=goniotec_admin; PWD=goniotech123456";
@@ -75,7 +80,7 @@ namespace Goniotech
 
                 if (v > 0)
                 {
-                    Kinect.MainWindow avaliar = new Kinect.MainWindow(fisioterapeuta, nome);
+                    Kinect.MainWindow avaliar = new Kinect.MainWindow(fisioterapeuta, user);
                     this.Hide();
                     avaliar.ShowDialog();
                 }

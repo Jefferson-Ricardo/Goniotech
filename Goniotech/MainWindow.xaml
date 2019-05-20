@@ -9,10 +9,11 @@
         WindowState="Maximized"
         WindowStyle="SingleBorderWindow"
         ResizeMode="NoResize"
+        Icon="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\Gonio.ico"
         >
     <Grid>
 
-        <Image Source="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Images\Logo.png" Margin="0,70,0,0" Opacity="0.3"/>
+        <Image Source="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Images\Gonio.png" Margin="0,70,0,0" Opacity="0.3"/>
         <Button x:Name="btn_cadastrarPaciente" Content="Paciente" Margin="10,80,0,0" Click="Button_Click" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" BorderBrush="{x:Null}" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="170" Cursor="Hand" FontSize="14" ToolTip="Cadastrar Paciente">
             <Button.Background>
                 <ImageBrush ImageSource="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\paciente.ico" AlignmentX="Left" Stretch="Uniform"/>

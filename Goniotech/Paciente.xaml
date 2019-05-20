@@ -9,6 +9,7 @@
         WindowStyle="SingleBorderWindow"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
+        Icon="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\paciente.ico"
         >
     <Grid Margin="0,0,0,-100">
         <Grid.ColumnDefinitions>
@@ -24,11 +25,11 @@
             <ComboBoxItem>FEMININO</ComboBoxItem>
         </ComboBox>
         <Label x:Name="lbl_dataDeNascimento" Content="Data de Nascimento" HorizontalAlignment="Left" Margin="22,94,0,0" VerticalAlignment="Top"/>
-        
+
         <StackPanel Margin="139,95,250,312">
             <DatePicker x:Name="dataNasc" DisplayDateStart="1900-01-01" KeyDown="calcularIdade"/>
         </StackPanel>
-        
+
         <Label x:Name="lbl_idadePaciente" Content="Idade" HorizontalAlignment="Left" Margin="293,94,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbx_idadePaciente" Height="23" Margin="341,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" VerticalContentAlignment="Center"/>
         <Label x:Name="lbl_CEP" Content="CEP" HorizontalAlignment="Left" Margin="11.5,94,0,0" VerticalAlignment="Top" Grid.Column="1"/>
@@ -73,8 +74,11 @@
         <Button x:Name="btn_avaliar" Grid.ColumnSpan="2" Content="Avaliar" HorizontalAlignment="Left" Margin="523,299,0,0" Width="75" Click="Btn_avaliar_Click" Height="26" VerticalAlignment="Top"/>
         <Button x:Name="btn_cancelPaciente" Content="Cancelar" Margin="78,299,105,0" Grid.Column="1" Click="Btn_cancelPaciente_Click" Height="26" VerticalAlignment="Top"/>
         <Button x:Name="btn_salvarPaciente" Content="Salvar" Margin="163,299,20,0" Height="26" VerticalAlignment="Top" Grid.Column="1" Click="Btn_salvarPaciente_Click"/>
-        <Button Grid.Column="1" Margin="216,94,20,0" VerticalAlignment="Top" Height="22" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="{x:Null}" Click="Button_Click">
-            <Image Source="C:\Users\DeLL\source\repos\Goniotech\Goniotech\Icons\buscaCEP.ico"/>
+        <Button Grid.Column="1" Margin="216,94,20,0" VerticalAlignment="Top" Height="22" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+            <Image Source="C:\Users\Jefferson\source\repos\Goniotech\Goniotech\Icons\buscaCEP.ico"/>
         </Button>
         <Button x:Name="btn_anamnesePaciente" Content="Anamnese" HorizontalAlignment="Left" Margin="435,299,0,0" Width="75" Click="Btn_anamnesePaciente_Click" Height="26" VerticalAlignment="Top"/>
     </Grid>
